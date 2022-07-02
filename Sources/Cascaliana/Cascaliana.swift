@@ -1,10 +1,10 @@
 public struct Cascaliana {
     
-    enum InterpolationError: Error {
+    public enum InterpolationError: Error {
         case invalidInput
     }
     
-    func interpolate<T:BinaryFloatingPoint> (target: T, x:[T], y:[T], n:Int = 100) throws -> T {
+    public func interpolate<T:BinaryFloatingPoint> (target: T, x:[T], y:[T], n:Int = 100) throws -> T {
         
         guard !x.isEmpty, !y.isEmpty else { throw InterpolationError.invalidInput }
         

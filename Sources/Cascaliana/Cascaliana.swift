@@ -1,3 +1,8 @@
+#if os(iOS)
+import UIKit
+#endif
+
+
 public struct Cascaliana {
     
     public enum InterpolationError: Error {
@@ -19,6 +24,9 @@ public struct Cascaliana {
     }
     
     public init() {
+        #if os(iOS)
+        let sample = UIImage(named: "Sample", in: .module, with: nil)
+        #endif
         
     }
     
